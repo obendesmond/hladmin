@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.hide-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+  
+.hide-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+  
+
+@layer base {
+    :root {
+      --chart-1: #a17e72; /* Tailwind Primary Color */
+      --chart-2: #d9c5bd; /* Tailwind Secondary Color */
+      --chart-3: #f59e0b; /* Tailwind Accent Color (e.g., Yellow) */
+      --chart-4: #4ade80; /* Tailwind Green */
+      --chart-5: #ef4444; /* Tailwind Red */
+    }
+  
+    .dark {
+      --chart-1: #f9a8d4; /* Dark Mode Primary Color */
+      --chart-2: #6ee7b7; /* Dark Mode Secondary Color */
+      --chart-3: #34d399; /* Dark Mode Accent Color */
+      --chart-4: #9333ea; /* Dark Mode Green */
+      --chart-5: #dc2626; /* Dark Mode Red */
+    }
+  }
+  
