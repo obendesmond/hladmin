@@ -17,11 +17,12 @@ export default function DashboardLayout({
       }
       className="bg-primary-light"
     >
-      <AppSidebar />
-      <SidebarInset>
-        <Header />
-        <ScrollArea className="flex-1 p-4 bg-white">{children}</ScrollArea>
-      </SidebarInset>
+      
+        <AppSidebar />
+        <SidebarInset>
+          <Header />
+          <ScrollArea className="flex-1 p-4 bg-white">{children}</ScrollArea>
+        </SidebarInset>
     </SidebarProvider>
   );
 }

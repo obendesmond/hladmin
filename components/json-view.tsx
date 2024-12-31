@@ -1,11 +1,18 @@
 import { CSSProperties } from "react";
-import ReactJson from "react-json-view";
+import dynamic from "next/dynamic";
+
+// Dynamically import ReactJson with SSR disabled
+const ReactJson = dynamic(() => import("react-json-view"), {
+  ssr: false,
+  loading: () => <div className="animate-pulse bg-gray-700 h-32 rounded-md" />
+});
 
 interface Props {
   jsonObj: object;
   style?: CSSProperties | undefined;
-  collapsed?:boolean
+  collapsed?: boolean;
 }
+
 const JsonView = ({ jsonObj = {}, style, collapsed = true }: Props) => {
   return (
     <ReactJson
@@ -19,4 +26,7 @@ const JsonView = ({ jsonObj = {}, style, collapsed = true }: Props) => {
   );
 };
 
-export default JsonView;
+export default dynamic(() => Promise.resolve(JsonView), {
+  ssr: false,
+  loading: () => <div className="animate-pulse bg-gray-700 h-32 rounded-md" />
+});
