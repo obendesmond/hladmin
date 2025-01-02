@@ -15,7 +15,7 @@
     "start:local": "cross-env NEXT_PUBLIC_ENV=local next start",
     "start:cloud": "cross-env NEXT_PUBLIC_ENV=cloud next start",
     "dev": "pnpm run dev:cloud",
-    "build": "pnpm run build",
+    "build": "next build",
     "start": "pnpm run start:cloud",
     "lint": "next lint"
   },
