@@ -1,0 +1,56 @@
+# apphosting.yaml
+runConfig:
+  minInstances: 1
+  maxInstances: 100
+  concurrency: 100
+  cpu: 2
+  memoryMiB: 1024
+
+env:
+  - variable: NEXT_PUBLIC_APP_BASE_URL_API_ADMIN_ROOT
+    value: https://uluru-01-admin-797083015054.us-east1.run.app/jsonrpc
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_APP_BASE_URL_API_SANDBOX_ROOT
+    value: http://localhost:5003/jsonrpc
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_API_KEY
+    value: AIzaSyASRFTStbV6UyOJ0mqVymGRKmOUwi_Dz3o
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_AUTH_DOMAIN
+    value: animated-flow-358400.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_PROJECT_ID
+    value: animated-flow-358400
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_STORAGE_BUBCKET
+    value: animated-flow-358400.firebasestorage.app
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_MSG_SENDER
+    value: 797083015054
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORE_APP_ID
+    value: 1:797083015054:web:a006cb78c3451177fbf6df
+    availability:
+      - BUILD
+      - RUNTIME
